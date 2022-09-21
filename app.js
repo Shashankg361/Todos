@@ -1,7 +1,13 @@
 const addList = document.querySelector('.add');
 const addTemplate = document.querySelector('.todos');
 const Search = document.querySelector('.Search input');
- 
+console.log(localStorage.length);
+console.log(localStorage.length+1);
+if( localStorage.length == 0 || localStorage.length == null)
+var i=0;
+else
+var i=localStorage.length+1;
+
 const getElement = todo =>{
     const html=`<li class="list-group-item d-flex justify-content-between align-items-center text-light">
         <span>${todo}</span>
@@ -12,12 +18,18 @@ const getElement = todo =>{
 
 addList.addEventListener('submit',e=>{
     e.preventDefault();
+    
     const todo = addList.add.value.trim();
-    if(todo.length){
-       getElement(todo); 
-       addList.reset();
+    i++;
+    if(todo.length){ 
+        localStorage.setItem(i,todo);
+        var value = localStorage.getItem(i);
+        console.log(value);
+        getElement(value);
+        addList.reset();
     }
     
+    console.log(i);
 });
 addTemplate.addEventListener('click',e=>{
     if(e.target.classList.contains('delete')){
