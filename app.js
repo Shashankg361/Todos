@@ -18,9 +18,9 @@ else{
 for(k=0;k<localStorage.length ; k++)
 {
     var key = Object.keys(localStorage);
-    console.log(Object.keys(localStorage));
+    //console.log(Object.keys(localStorage));
     var value = localStorage.getItem(key[k]);
-    console.log(value);
+    //console.log(value);
     getElement(key[k],value);
 }
 var i=localStorage.length+1;
@@ -33,16 +33,16 @@ addList.addEventListener('submit',e=>{
     
     const todo = addList.add.value.trim();
     i++;
-    console.log(i);
+    //console.log(i);
     if(todo.length){ 
         localStorage.setItem(i,todo);
         var value = localStorage.getItem(i);
-        console.log(value);
+        //console.log(value);
         getElement(i,value);
         addList.reset();
     }
     
-    console.log(i);
+    //console.log(i);
 });
 
 addTemplate.addEventListener('click',e=>{
