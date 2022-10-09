@@ -49,7 +49,7 @@ addTemplate.addEventListener('click',e=>{
     if(e.target.classList.contains('delete')){
         e.target.parentElement.remove();
         localStorage.removeItem(e.target.parentElement.value);
-        console.log(e.target.parentElement.value);
+        //console.log(e.target.parentElement.value);
     }
 });
 

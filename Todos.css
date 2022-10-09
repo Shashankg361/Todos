@@ -19,3 +19,10 @@ input[type=text]:focus{
 .delete{
     cursor: pointer;
 }
+.Todo-label{
+    background-image: url("todo-label-2.jpg") ;
+    padding: 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
